@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const Book = require('./src/book');
-const Genre = require('./src/genre');
+const Intake = require('./src/intake');
+const Campus = require('./src/campus');
 
 const db = 'practice-mongodb';
 const url = 'mongodb://127.0.0.1:27017/';
@@ -11,10 +11,11 @@ const main = async () => await mongoose.connect(url + db);
 main().catch(console.err);
 
 beforeEach(async () => {
-	await Book.deleteMany({});
-	await Genre.deleteMany({});
+	await Intake.deleteMany({});
+	await Campus.deleteMany({});
+	// await Intake.collection.dropIndexes();
 });
 afterEach(async () => {
-	await Book.deleteMany({});
-	await Genre.deleteMany({});
+	await Intake.deleteMany({});
+	await Campus.deleteMany({});
 });
