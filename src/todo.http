@@ -1,0 +1,37 @@
+  
+@baseUrl = http://localhost:9000
+  
+GET {{baseUrl}}/todo/643fd81f4bb5b763878a60aa
+  
+###
+
+GET {{baseUrl}}/todos 
+  
+###
+
+POST {{baseUrl}}/todo
+content-type: application/json
+
+{
+  "todo": {
+    "title": "Task 1",
+    "description": "Task description 1" 
+  }
+}
+  
+###
+
+PUT {{baseUrl}}/todo/643fd81f4bb5b763878a60aa
+content-type: application/json
+
+{
+  "todo": {
+    "title": "Task [updated]",
+    "description": "Task description [updated]"
+  }
+}
+  
+###
+
+DELETE {{baseUrl}}/todo/643fd81f4bb5b763878a60aa
+  
