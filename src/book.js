@@ -9,7 +9,7 @@ const bookSchema = new mongoose.Schema({
   thumbnailUrl: String,
   publishedDate: Date,
   description: {
-    shortDescription: String,
+    shortDescription: Number,
     longDescription: String,
   },
   authors: [{ type: String }],
